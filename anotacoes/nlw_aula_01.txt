@@ -1,0 +1,102 @@
+Instale chocolatey
+Instale nodejs
+cmd: choco install nodejs-lte
+/*verificar se foi automático npm */
+
+Inicializando um projeto em uma pasta, '-y' diz para iniciar no modo padrão (info principais do projeto no package.json, também dependências)
+cmd: npm init -y
+
+Já estando na pasta do projeto, abrí-lo no VSCode
+Não estando na pasta do projeto, troque o '.' pelo PATH.
+cmd: code .
+
+Ao instalar uma dependência, esta poderá conter dependências que também serão instaladas na pasta node_modules.
+cmd: npm install express
+
+Algumas bibliotecas não trazem as definições de tipo na própria biblioteca, então para corrigir precisamos baixá-las e a própria IDE sugere como ao colocar o foco nos '...' sobre a linha que importa a dependência "import express from 'express';"
+
+cmd: npm install @types/express -D
+# esse -D significa dependência de desenvolvimento. Só será usado durante o desenvolvimento. Quando for para ambiente de produção o código já estará em JS e não em TS, logo não será necessário ter as definições.
+
+Ctrl + Clique sobre objeto no VSCode = Declarações de tipos do express
+
+express serve para definir as rotas
+
+rota
+recursos
+app.get()
+
+app.get('/users', () => {
+    console.log('Listagem d usuários');
+}); 
+
+Primeiro parâmetro é o recurso, segundo é a função que será executada quando a rota for acessada.
+
+Para rodar o scrip 'ts' preciso instalar a dependência 'ts-node', pois o node só conhece 'js'.
+cmd: npm install ts-node -D
+
+"node_modules/bin" visualizo os binários dos meus pacotes instalados
+
+"npx" serve para executar um pacote que instalamos, assim não preciso colocar o caminho do binário.
+ex.: cmd: npx ts-node src/server.ts
+
+"npx pacote"
+Caso o pacote não esteja na máquina ele procura na web, instala e executa.
+
+instalando typescript
+cmd: npm install typescript -D
+
+Sempre que criarmos uma aplicação TS devemos criar o arquivo de config do TS para definir quais features do TS queremos utilizar quais não queremos.
+
+Fazrmos isso com o comando:
+cmd: npx tsc --init
+
+tsc = typescript
+
+instale a extensão "JSON Viewer" no browser e configure o tema; escolhi "mbo".
+
+Pacote que permite otimizar o processo de reiniciar o server sempre que alterar e salvar o arquivo
+npm install ts-node-dev -D
+
+package.json
+"scripts" : {
+	"dev": "ts-node-dev src/server.ts
+}
+
+React
+	biblioteca para construção de interfaces;
+	Single-Page Aplications (SPA);
+	Biblioteca ou Framework? tanto faz, perspectiva
+	Tudo dentro do Js
+	É dividido em pacotes React / ReactJS / React Native
+
+	Vantagens
+		Organização
+			Componentização
+		Divisão de responsabilidades
+			Bend: Regras de Negócio
+			Fend: Interface
+		Uma única API, múltiplos clientes
+
+
+C:\Users\Diego\GitRep\nlw1>
+npx create-react-app web --template=typescript
+
+Onde web é o nome da nossa aplicação
+
+"--template=typescript" já deixa o projeto configurado para TS
+
+"Live Reload" atualizar automático sempre que fizer alteração
+
+interface react native contém um core que não exige transpilação para linguágens padrão como Objective-C/Swift (IOS) ou Java/Kotlin (Android).
+
+Ela faz com que o dispositivo entenda e execute tudo como JS
+
+Criando um repo e subindo
+echo "# NextLevelWeek-1" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git branch -M main
+git remote add origin https://github.com/DiFeitoza/NextLevelWeek-1.git
+git push -u origin main

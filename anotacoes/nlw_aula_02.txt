@@ -1,0 +1,50 @@
+Aprendemos diversos conceitos.
+
+  API REST/RESTful https://pt.stackoverflow.com/questions/45783/o-que-%C3%A9-rest-e-restful
+  
+  Rota: Endereço completo da requisção
+  Recurso: Qual entidade do sistema estamos acessando
+
+  GET: Buscar uma ou mais informações do back-end
+  POST: Criar uma nova informação no back-end
+  PUT: Atualizar uma informação existente no back-end
+  DELETE: Remover uma informação do beck-end
+
+  Request Param: Parâmetros que vêm na própria rota que identificam um recurso
+  Query Param: Parâmetros que vêm na própria rota. Geralmente opcionais para filtros, paginação
+  Request Body: Parâmetros para criação/atualização de informações
+
+Utilizaremos o knex + SQLite.
+
+  SQlite porque não exige instalação
+  knex para padronizar para diversos bancos
+
+  cmd: npm install knex
+  cmd: npm install sqlite3
+  
+  Exemplo de uso:
+    knex('users').where('name', 'Diego').select('*')
+    ELECT * FROM users WHERE name = 'Diego'
+
+Separamos routes e database.
+
+Aprendi alguns recursos básicos do js.
+Busquei atalhos úteis do VScode para já por em prática.
+Busquei aprender alguns recursos do Insomnia e explorei a api.
+
+Criando conexão ao banco
+  "
+  import knex from 'knex';
+  import path from 'path';
+
+  const connection = knex({
+    client: 'sqlite3',
+    connection: {
+      filename: path.resolve(__dirname, 'database.sqlite')
+    },
+  });
+
+  export default connection;
+  "
+
+  Utilizamos a biblioteca 'path' do node para padronizar os caminhos independente do SO onde será executado.

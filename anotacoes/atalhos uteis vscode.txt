@@ -21,10 +21,15 @@ CURSOR ---- ---- ---- ----
     Inserir cursor em todas expressões iguais
         Ctrl + Shift + L
 
-LINHAS ---- ---- ---- ----
+SELEÇÃO ---- ---- ---- ----
+    
+    Seleção gradual de dentro para fora
+        Shift + alt + direita
 
     Selecionar linha
         Ctrl + L
+
+LINHAS ---- ---- ---- ----
 
     Tab na linha
         Ctrl + [
@@ -52,3 +57,9 @@ COMENTAR ---- ---- ---- ----
 
     Comentar linha
         Ctrl + ;
+
+
+**** **** BÔNUS **** ****
+INSOMNIA
+    Sugerir variáveis de ambiente
+        Ctrl + space

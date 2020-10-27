@@ -1,0 +1,54 @@
+---- Meus atalhos VSCode ----
+
+CONFIGURAÇÕES ---- ---- ----
+    
+    Acessar configurações
+        Ctrl + ,
+
+ARQUIVOS ---- ---- ---- ----
+
+    Buscar arquivo
+        Ctrl + Shift + L
+
+CURSOR ---- ---- ---- ----
+
+    Inserir cursor
+        Alt + Clique esquerdo
+
+    Inserir cursor nas expressões iguais abaixo
+        Ctrl + D
+
+    Inserir cursor em todas expressões iguais
+        Ctrl + Shift + L
+
+LINHAS ---- ---- ---- ----
+
+    Selecionar linha
+        Ctrl + L
+
+    Tab na linha
+        Ctrl + [
+        Ctrl + Shift + Tab
+
+    Mover linha
+        Alt + Baixo/Cima
+
+    Duplicar linha
+        Alt + Shift + Baixo/Cima
+
+    Inserir linha baixo
+        Ctrl + Enter
+
+    Inserir linha acima
+        Ctrl + Shift + Enter
+
+    Quebra de linha automática
+        Alt + Z
+
+COMENTAR ---- ---- ---- ----
+
+    Comentar bloco
+        Shift + Alt + A
+
+    Comentar linha
+        Ctrl + ;

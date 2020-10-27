@@ -38,14 +38,14 @@ const users = [
   }
 ];
 
-/* app.get('/html', (request, response) => {
+app.get('/html', (request, response) => {
   console.log("enviando string como html");
   return response.send("<!DOCTYPE HTML><head></head><body><h1><div style = 'color:#00f; text-align: center'>Olá Rianny</div></h1><div><img style = 'width: 1000px; display: block; margin-left: auto; margin-right: auto;' src='https://i.pinimg.com/originals/e5/7e/87/e57e871c830c9ec1e1ae51c07a9f7c56.jpg'></div></body>");
-}); */
+});
 
 /* app.get('/users', (request, response) => {
   console.log('List users');
-  // query permite que eu receba um par 'chave':'valor' na mesma rota, sem ser por parametro de recurso
+  // query permite que eu receba um par 'chave':'valor' na mesma rota, sem ser por parâmetro de recurso
   const valueSearch = request.query.search;
 
   const filteredUsers = valueSearch ?
@@ -58,19 +58,15 @@ const users = [
   })
 }); */
 
-/* app.get('/users/:id', (request, response) => {
-  // preciso colocar ':' antes do recurso para poder acessá-lo com o método request.params
-  // será retornado como strig
-  console.log('Acess user by id');
-  
-  return response.json(
-    users[Number(request.params.id)]
-    )
-}); */
-
 app.get('/users', (request, response) => {
   console.log('GET /users');
   return response.json(users);
+});
+
+app.get('/users/:id', (request, response) => {
+  // preciso colocar ':' antes do recurso para poder acessá-lo com o método request.params
+  console.log('GET /users/' + request.params.id);
+  return response.json(users[Number(request.params.id)])
 });
 
 app.post('/users', (request, response) => {
@@ -87,13 +83,18 @@ app.put('/users/:id',  (request, response) => {
       (user) => { return user.id === id }
   );
  
-  return response.json(users[idxUser] ? users[idxUser].name = data.name : 'not find');
+  return response.json(
+    idxUser != -1 ? users[idxUser].name = data.name : 'not find'
+  );
 });
 
 app.delete('/users/:id', (request, response) => {
   console.log('DELETE /users/' + request.params.id);
 
-  let indDel = users.findIndex((user) => { return user.id === request.params.id});
+  let indDel = users.findIndex(
+    (user) => { return user.id === request.params.id }
+  );
+
   users.splice(indDel, 1);
 
   return response.json(users);

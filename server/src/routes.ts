@@ -5,11 +5,11 @@ const routes = express.Router();
 const users = [
   {
     id: '0',
-    name : 'diego'
+    name: 'diego'
   },
   {
     id: '1',
-    name : 'tiago'
+    name: 'tiago'
   },
   {
     id: '2',
@@ -74,9 +74,7 @@ routes.delete('/users/:id', (request, response) => {
     (user) => { return user.id === request.params.id }
   );
 
-  users.splice(indDel, 1);
-
-  return response.json(users);
+  return response.json(users.splice(indDel, 1));
 });
 
 export default routes;

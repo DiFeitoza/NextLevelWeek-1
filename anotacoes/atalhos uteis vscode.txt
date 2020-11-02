@@ -5,10 +5,16 @@ CONFIGURAÇÕES ---- ---- ----
     Acessar configurações
         Ctrl + ,
 
+    Alterar prefêrencias
+        Ctrl + Shift + P
+        
 ARQUIVOS ---- ---- ---- ----
 
     Buscar arquivo
         Ctrl + Shift + L
+
+    Abrir projeto no explorador de arquivos
+	Ctrl + Shift + R
 
 CURSOR ---- ---- ---- ----
 
@@ -63,3 +69,10 @@ COMENTAR ---- ---- ---- ----
 INSOMNIA
     Sugerir variáveis de ambiente
         Ctrl + space
+
+EXPLORADOR DE ARQUIVOS
+    Abrir projeto no VScode
+        Digite e execute o comando 'code .' na barra de endereços*
+
+    Abrir projeto no cmd
+        Digite e execute o comando 'cmd' na barra de endereços*

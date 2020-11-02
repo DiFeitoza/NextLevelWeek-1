@@ -47,4 +47,12 @@ Criando conexão ao banco
   export default connection;
   "
 
-  Utilizamos a biblioteca 'path' do node para padronizar os caminhos independente do SO onde será executado.
+Utilizamos a biblioteca 'path' do node para padronizar os caminhos independente do SO onde será executado.
+
+Acrescentamos um knexfile.ts que fica na raiz e conhece o caminho para o banco, para a pasta migrations e para a pasta seeds.
+
+Então executamos o comando chamando o knexfile e ele dispara a ação no banco.
+
+ex.
+  npx knex --knexfile knexfile.ts migrate:latest",
+  npx knex --knexfile knexfile.ts seed:run"

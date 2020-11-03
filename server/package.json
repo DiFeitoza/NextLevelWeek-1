@@ -5,8 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "tnd": "ts-node-dev src/server.ts",
-    "tnd:speed": "ts-node-dev --transpileOnly --ignore-watch src/server.ts",
+    "tsnd": "ts-node-dev src/server.ts",
+    "tsnd:speed": "tsnd --respawn --transpile-only --ignore-watch node_modules src/server.ts",
     "knex:migrate": "knex --knexfile knexfile.ts migrate:latest",
     "knex:seed": "knex --knexfile knexfile.ts seed:run"
   },
